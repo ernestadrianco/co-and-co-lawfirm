@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Co & Co Law Firm | Tax & Compliance</title>
+  <meta name="description" content="Co & Co Law Firm is a boutique practice focused on tax, compliance, business law, and dispute-sensitive legal matters." />
+
+  <style>
+    :root {
+      --navy: #0a2856;
+      --navy-deep: #071b33;
+      --gold: #c59a3a;
+      --gold-soft: #dcc085;
+      --paper: #f6f5f2;
+      --white: #ffffff;
+      --ink: #172033;
+      --muted: #5f6775;
+      --line: #e4e6ea;
+      --max-width: 1160px;
+      --shadow: 0 14px 40px rgba(7, 27, 51, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.65;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    p { margin: 0 0 18px; }
+
+    h1, h2, h3 {
+      margin: 0 0 18px;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-weight: 500;
+      line-height: 1.08;
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      min-height: 98px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand-logo {
+      width: 250px;
+      height: auto;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+    }
+
+    .site-nav a {
+      color: var(--navy-deep);
+      font-size: 0.95rem;
+    }
+
+    .site-nav a:hover { color: var(--gold); }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      padding: 10px 8px;
+    }
+
+    .menu-toggle span {
+      display: block;
+      height: 2px;
+      margin: 5px 0;
+      background: var(--navy-deep);
+    }
+
+    .hero {
+      background:
+        linear-gradient(135deg, rgba(7,27,51,0.96), rgba(10,40,86,0.88)),
+        radial-gradient(circle at 80% 25%, rgba(197,154,58,0.18), transparent 30%);
+      color: var(--white);
+      padding: 84px 0 90px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      margin-bottom: 16px;
+      color: var(--gold-soft);
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .hero h1 {
+      max-width: 760px;
+      font-size: clamp(2.5rem, 6vw, 5.2rem);
+    }
+
+    .lead {
+      max-width: 620px;
+      color: rgba(255,255,255,0.84);
+      font-size: 1.08rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 22px;
+      border-radius: 2px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: transform 160ms ease, background-color 160ms ease;
+    }
+
+    .button:hover { transform: translateY(-1px); }
+
+    .button-primary {
+      background: var(--gold);
+      color: var(--navy-deep);
+    }
+
+    .button-secondary {
+      border-color: rgba(255,255,255,0.4);
+      color: var(--white);
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.16);
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card-label {
+      margin-bottom: 14px;
+      color: var(--gold-soft);
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .hero-card ul { margin: 0; padding-left: 18px; }
+    .hero-card li { margin-bottom: 10px; }
+
+    .section { padding: 88px 0; }
+    .section-light { background: var(--white); }
+    .section-plain { background: var(--paper); }
+    .section-accent { background: #f1efe9; }
+
+    .section-title {
+      margin-bottom: 28px;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+    }
+
+    .two-column, .note-grid, .contact-grid, .profile-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 54px;
+    }
+
+    .two-column h2, .note-grid h2, .contact-grid h2, .profile-grid h2 {
+      font-size: clamp(2rem, 4vw, 3.4rem);
+    }
+
+    .service-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .service-item {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 24px;
+      padding: 26px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .service-number {
+      color: var(--gold);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.4rem;
+    }
+
+    .service-item h3 { font-size: 1.42rem; }
+    .service-item p { color: var(--muted); }
+
+    .quote-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 34px;
+      box-shadow: var(--shadow);
+      align-self: start;
+    }
+
+    .quote-mark {
+      margin: 0 0 10px;
+      color: var(--gold);
+      font-size: 4.2rem;
+      line-height: 1;
+      font-family: Georgia, serif;
+    }
+
+    .quote-text {
+      font-size: 1.18rem;
+      color: var(--navy-deep);
+    }
+
+    .notes {
+      display: grid;
+      gap: 22px;
+    }
+
+    .notes div {
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .notes h3 { font-size: 1.3rem; }
+    .notes p { color: var(--muted); }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 34px;
+    }
+
+    .blog-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .blog-card .blog-date {
+      margin-bottom: 12px;
+      color: var(--gold);
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .blog-card h3 {
+      font-size: 1.38rem;
+    }
+
+    .blog-card p {
+      color: var(--muted);
+    }
+
+    .blog-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: var(--navy-deep);
+      font-weight: 700;
+      border-bottom: 1px solid var(--gold);
+    }
+
+    .contact-details {
+      margin-top: 28px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .contact-details strong { color: var(--navy-deep); }
+
+    .contact-form {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-form label {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 18px;
+      font-weight: 700;
+      color: var(--navy-deep);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #cfd5de;
+      background: var(--white);
+      font: inherit;
+      color: var(--ink);
+    }
+
+    textarea { resize: vertical; }
+
+    .form-note {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .site-footer {
+      padding: 32px 0;
+      background: var(--white);
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .footer-logo {
+      width: 180px;
+      height: auto;
+    }
+
+    .footer-note {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .menu-toggle { display: block; }
+
+      .site-nav {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 98px;
+        background: var(--white);
+        border-bottom: 1px solid var(--line);
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+      }
+
+      .site-nav.open { display: flex; }
+
+      .hero-grid, .two-column, .note-grid, .contact-grid, .profile-grid, .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .header-inner { min-height: 88px; }
+      .brand-logo { width: 210px; }
+    }
+
+    @media (max-width: 560px) {
+      .container { width: min(var(--max-width), calc(100% - 24px)); }
+      .brand-logo { width: 170px; }
+      .hero { padding-top: 66px; }
+      .hero-actions { display: grid; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="Co & Co Law Firm home">
+        <img
+          src="https://static.thenounproject.com/png/6530312-200.png"
+          alt="Co & Co Law Firm logo placeholder"
+          class="brand-logo"
+        />
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#firm">Firm</a>
+        <a href="#services">Services</a>
+        <a href="#attorney">Attorney</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Boutique Law Practice</p>
+          <h1>Personal legal counsel in tax, compliance, and business matters.</h1>
+          <p class="lead">
+            Co & Co Law Firm provides clear, direct, and practical legal guidance for
+            individuals, professionals, and growing businesses.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contact">Request Consultation</a>
+            <a class="button button-secondary" href="#services">View Services</a>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <div class="hero-card">
+            <p class="hero-card-label">Focused Practice Areas</p>
+            <ul>
+              <li>Tax Advisory and Documentation</li>
+              <li>Compliance and Regulatory Support</li>
+              <li>Corporate and Business Law</li>
+              <li>Dispute Resolution Strategy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="firm" class="section section-light">
+      <div class="container two-column">
+        <div>
+          <p class="eyebrow">The Firm</p>
+          <h2>Small by design. Personal by approach.</h2>
+        </div>
+        <div>
+          <p>
+            Co & Co Law Firm is built around responsive communication, careful legal analysis,
+            and practical strategy. Clients work directly with the lawyer handling their matter,
+            with attention tailored to their goals, timeline, and risk profile.
+          </p>
+          <p>
+            This format is ideal for clients who prefer a boutique firm relationship: focused,
+            discreet, and detail-oriented.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section section-plain">
+      <div class="container">
+        <p class="eyebrow">Services</p>
+        <h2 class="section-title">Practice Areas</h2>
+
+        <div class="service-list">
+          <article class="service-item">
+            <span class="service-number">01</span>
+            <div>
+              <h3>Tax Advisory</h3>
+              <p>Tax planning, assessment review, supporting documentation, and compliance guidance.</p>
+            </div>
+          </article>
+          <article class="service-item">
+            <span class="service-number">02</span>
+            <div>
+              <h3>Compliance</h3>
+              <p>Regulatory filings, governance review, internal controls, and legal compliance support.</p>
+            </div>
+          </article>
+          <article class="service-item">
+            <span class="service-number">03</span>
+            <div>
+              <h3>Corporate and Business Law</h3>
+              <p>Contracts, company formation, business structuring, and routine corporate legal needs.</p>
+            </div>
+          </article>
+          <article class="service-item">
+            <span class="service-number">04</span>
+            <div>
+              <h3>Dispute Resolution</h3>
+              <p>Demand letters, settlement strategy, negotiation support, and pre-litigation guidance.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="attorney" class="section section-accent">
+      <div class="container profile-grid">
+        <div class="profile-block">
+          <p class="eyebrow">Attorney Profile</p>
+          <h2>Atty. Ernest </h2>
+          <p>
+            Atty. Ernest is a CPA tax lawyer with extensive experience assisting clients in matters involving the Bureau of Internal Revenue and the Securities and Exchange Commission, including the resolution of tax audit and compliance issues. The practice is focused on helping clients understand their obligations, prepare proper documentation, and respond to tax and compliance concerns with clarity and strategy.
+
+Atty. Ernest also handles contract review and Data Privacy compliance reviews, providing practical legal guidance to individuals, professionals, entrepreneurs, and businesses that need careful review, clear advice, and responsive counsel.
+          </p>
+          <p>
+            For a boutique firm website, this section should feel personal and trust-building.
+            Clients usually want to know who they will be working with directly.
+          </p>
+        </div>
+        <div class="quote-card">
+          <p class="quote-mark">“</p>
+          <p class="quote-text">
+            The right legal advice should be clear, strategic, and aligned with your real-world goals.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container note-grid">
+        <div>
+          <p class="eyebrow">Why Clients Choose a Boutique Firm</p>
+          <h2>Direct communication and careful attention.</h2>
+        </div>
+        <div class="notes">
+          <div>
+            <h3>Personal handling</h3>
+            <p>Your matter is not passed from one department to another without context.</p>
+          </div>
+          <div>
+            <h3>Thoughtful strategy</h3>
+            <p>Every document and step is reviewed with attention to practical outcomes and risk.</p>
+          </div>
+          <div>
+            <h3>Clear next steps</h3>
+            <p>You receive guidance in plain language so you can make informed decisions quickly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="section section-plain">
+      <div class="container">
+        <p class="eyebrow">Blog</p>
+        <h2 class="section-title">Legal Notes & Updates</h2>
+        <p class="lead-text">
+          Use this space for short articles, client guides, legal updates, and practical notes on tax, compliance, and business law.
+        </p>
+
+        <div class="blog-grid">
+          <article class="blog-card">
+            <p class="blog-date">Month Day, Year</p>
+            <h3>Blog Post Title One</h3>
+            <p>
+              Write a short summary of your blog post here. Keep it clear, helpful, and focused on one legal issue.
+            </p>
+            <a href="#" class="blog-link">Read more</a>
+          </article>
+
+          <article class="blog-card">
+            <p class="blog-date">Month Day, Year</p>
+            <h3>Blog Post Title Two</h3>
+            <p>
+              Add another short article summary here. This can be a tax reminder, compliance checklist, or business-law guide.
+            </p>
+            <a href="#" class="blog-link">Read more</a>
+          </article>
+
+          <article class="blog-card">
+            <p class="blog-date">Month Day, Year</p>
+            <h3>Blog Post Title Three</h3>
+            <p>
+              Use this third slot for announcements, legal updates, or frequently asked client questions.
+            </p>
+            <a href="#" class="blog-link">Read more</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-light">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Request a consultation.</h2>
+          <p>
+            Send a brief message and the firm will review your inquiry. Replace the contact details below
+            with your actual email, phone number, and office address.
+          </p>
+
+          <div class="contact-details">
+            <p><strong>Email</strong><br /><a href="mailto:info@yourdomain.com">info@yourdomain.com</a></p>
+            <p><strong>Phone</strong><br /><a href="tel:+630000000000">+63 000 000 0000</a></p>
+            <p><strong>Office</strong><br />[Your Office Address]</p>
+          </div>
+        </div>
+
+        <form class="contact-form" action="mailto:info@yourdomain.com" method="post" enctype="text/plain">
+          <label>
+            Name
+            <input type="text" name="Name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="Email" required />
+          </label>
+          <label>
+            Legal concern
+            <textarea name="Message" rows="6" required></textarea>
+          </label>
+          <button type="submit" class="button button-primary">Send Inquiry</button>
+          <p class="form-note">For launch, replace this mailto form with Formspree, Netlify Forms, or your preferred secure intake form.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <img
+        src="https://static.thenounproject.com/png/6530312-200.png"
+        alt="Co & Co Law Firm logo placeholder"
+        class="footer-logo"
+      />
+      <div>
+        <p>© <span id="year"></span> Co & Co Law Firm. All rights reserved.</p>
+        <p class="footer-note">This website is for general information only and does not create an attorney-client relationship.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.site-nav');
+    const yearEl = document.getElementById('year');
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+  </script>
+</body>
+</html>
