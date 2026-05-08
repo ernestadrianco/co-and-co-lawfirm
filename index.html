@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Co & Co Law Firm | Tax & Compliance</title>
   <meta name="description" content="Co & Co Law Firm is a boutique practice focused on tax, compliance, notarial services, business law, and dispute-sensitive legal matters." />
 
@@ -22,13 +21,8 @@
       --shadow: 0 14px 40px rgba(7, 27, 51, 0.08);
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -38,25 +32,13 @@
       line-height: 1.65;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    p { margin: 0 0 18px; }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    p {
+    h1, h2, h3 {
       margin: 0 0 18px;
-    }
-
-    h1,
-    h2,
-    h3 {
-      margin: 0 0 18px;
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-weight: 500;
       line-height: 1.08;
     }
@@ -70,7 +52,7 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(255, 255, 255, 0.96);
+      background: rgba(255,255,255,0.96);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--line);
     }
@@ -99,9 +81,7 @@
       font-size: 0.95rem;
     }
 
-    .site-nav a:hover {
-      color: var(--gold);
-    }
+    .site-nav a:hover { color: var(--gold); }
 
     .menu-toggle {
       display: none;
@@ -110,7 +90,6 @@
       border: 1px solid var(--line);
       background: var(--white);
       padding: 10px 8px;
-      cursor: pointer;
     }
 
     .menu-toggle span {
@@ -122,8 +101,8 @@
 
     .hero {
       background:
-        linear-gradient(135deg, rgba(7, 27, 51, 0.96), rgba(10, 40, 86, 0.88)),
-        radial-gradient(circle at 80% 25%, rgba(197, 154, 58, 0.18), transparent 30%);
+        linear-gradient(135deg, rgba(7,27,51,0.96), rgba(10,40,86,0.88)),
+        radial-gradient(circle at 80% 25%, rgba(197,154,58,0.18), transparent 30%);
       color: var(--white);
       padding: 84px 0 90px;
     }
@@ -145,13 +124,13 @@
     }
 
     .hero h1 {
-      max-width: 820px;
+      max-width: 760px;
       font-size: clamp(2.5rem, 6vw, 5.2rem);
     }
 
     .lead {
-      max-width: 720px;
-      color: rgba(255, 255, 255, 0.84);
+      max-width: 620px;
+      color: rgba(255,255,255,0.84);
       font-size: 1.08rem;
     }
 
@@ -174,43 +153,110 @@
       transition: transform 160ms ease, background-color 160ms ease;
     }
 
-    .button:hover {
-      transform: translateY(-1px);
-    }
+    .button:hover { transform: translateY(-1px); }
 
     .button-primary {
       background: var(--gold);
       color: var(--navy-deep);
     }
 
-    .section {
-      padding: 88px 0;
+    .button-secondary {
+      border-color: rgba(255,255,255,0.4);
+      color: var(--white);
     }
 
-    .section-light {
-      background: var(--white);
+    .hero-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.16);
+      padding: 30px;
+      box-shadow: var(--shadow);
     }
 
-    .section-plain {
-      background: var(--paper);
+    .hero-card-label {
+      margin-bottom: 14px;
+      color: var(--gold-soft);
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
     }
+
+    .hero-card ul { margin: 0; padding-left: 18px; }
+    .hero-card li { margin-bottom: 10px; }
+
+    .section { padding: 88px 0; }
+    .section-light { background: var(--white); }
+    .section-plain { background: var(--paper); }
+    .section-accent { background: #f1efe9; }
 
     .section-title {
       margin-bottom: 28px;
       font-size: clamp(2rem, 4vw, 3.4rem);
     }
 
-    .two-column,
-    .contact-grid {
+    .two-column, .note-grid, .contact-grid, .profile-grid {
       display: grid;
       grid-template-columns: 0.9fr 1.1fr;
       gap: 54px;
     }
 
-    .two-column h2,
-    .contact-grid h2 {
+    .two-column h2, .note-grid h2, .contact-grid h2, .profile-grid h2 {
       font-size: clamp(2rem, 4vw, 3.4rem);
     }
+
+    .service-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .service-item {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 24px;
+      padding: 26px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .service-number {
+      color: var(--gold);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.4rem;
+    }
+
+    .service-item h3 { font-size: 1.42rem; }
+    .service-item p { color: var(--muted); }
+
+    .quote-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 34px;
+      box-shadow: var(--shadow);
+      align-self: start;
+    }
+
+    .quote-mark {
+      margin: 0 0 10px;
+      color: var(--gold);
+      font-size: 4.2rem;
+      line-height: 1;
+      font-family: Georgia, serif;
+    }
+
+    .quote-text {
+      font-size: 1.18rem;
+      color: var(--navy-deep);
+    }
+
+    .notes {
+      display: grid;
+      gap: 22px;
+    }
+
+    .notes div {
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .notes h3 { font-size: 1.3rem; }
+    .notes p { color: var(--muted); }
 
     .blog-grid {
       display: grid;
@@ -257,9 +303,7 @@
       gap: 18px;
     }
 
-    .contact-details strong {
-      color: var(--navy-deep);
-    }
+    .contact-details strong { color: var(--navy-deep); }
 
     .contact-form {
       background: var(--white);
@@ -276,8 +320,7 @@
       color: var(--navy-deep);
     }
 
-    input,
-    textarea {
+    input, textarea {
       width: 100%;
       padding: 13px 14px;
       border: 1px solid #cfd5de;
@@ -286,9 +329,7 @@
       color: var(--ink);
     }
 
-    textarea {
-      resize: vertical;
-    }
+    textarea { resize: vertical; }
 
     .form-note {
       margin-top: 14px;
@@ -321,9 +362,7 @@
     }
 
     @media (max-width: 900px) {
-      .menu-toggle {
-        display: block;
-      }
+      .menu-toggle { display: block; }
 
       .site-nav {
         display: none;
@@ -339,48 +378,23 @@
         gap: 18px;
       }
 
-      .site-nav.open {
-        display: flex;
-      }
+      .site-nav.open { display: flex; }
 
-      .hero-grid,
-      .two-column,
-      .contact-grid,
-      .blog-grid {
+      .hero-grid, .two-column, .note-grid, .contact-grid, .profile-grid, .blog-grid {
         grid-template-columns: 1fr;
         gap: 32px;
       }
 
-      .header-inner {
-        min-height: 88px;
-      }
-
-      .brand-logo {
-        width: 210px;
-      }
+      .header-inner { min-height: 88px; }
+      .brand-logo { width: 210px; }
     }
 
     @media (max-width: 560px) {
-      .container {
-        width: min(var(--max-width), calc(100% - 24px));
-      }
-
-      .brand-logo {
-        width: 170px;
-      }
-
-      .hero {
-        padding-top: 66px;
-      }
-
-      .hero-actions {
-        display: grid;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+      .container { width: min(var(--max-width), calc(100% - 24px)); }
+      .brand-logo { width: 170px; }
+      .hero { padding-top: 66px; }
+      .hero-actions { display: grid; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
@@ -401,9 +415,9 @@
       </button>
 
       <nav class="site-nav" aria-label="Main navigation">
-        <a href="#firm">The Firm</a>
+        <a href="#firm">Firm</a>
         <a href="#blog">Blog</a>
-        <a href="#contact">Contact Us</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -415,6 +429,7 @@
           <p class="eyebrow">Lawyer | Notary Public | Certified Public Accountant</p>
           <h1>Your personal legal counsel for tax, compliance, and other business matters.</h1>
           <p class="lead">
+                        
             At the Firm, we aim to provide clear, direct, and practical legal guidance and financial advice for individuals, professionals,
             corporations, and growing businesses.
           </p>
@@ -429,17 +444,14 @@
       <div class="container two-column">
         <div>
           <p class="eyebrow">The Firm</p>
-          <h2>Small by design. Personal by approach.</h2>
+          <h2>Our Mission</h2>
         </div>
         <div>
           <p>
-            At Co & Co Law Firm, clients receive practical legal guidance with a personal touch.
-            The firm takes time to understand each client’s concerns, explain available options clearly,
-            and provide support that is grounded in both legal judgment and business sense.
+            At Co & Co Law Firm, we make it our mission provide our clients with support grounded in both legal judgment and business sense.
           </p>
           <p>
-            As a boutique practice, the firm values direct communication, thoughtful advice,
-            and a working relationship built on trust, discretion, and attention to detail.
+            At our core, we are a boutique practice focused on creating working relationships built on trust, discretion, and attention to detail.
           </p>
         </div>
       </div>
@@ -449,7 +461,7 @@
       <div class="container">
         <p class="eyebrow">Blog</p>
         <h2 class="section-title">Legal Notes & Updates</h2>
-        <p>
+        <p class="lead-text">
           Use this space for short articles, client guides, legal updates, and practical notes on tax, compliance, and business law.
         </p>
 
@@ -458,30 +470,27 @@
             <p class="blog-date">May 7, 2026</p>
             <h3>The BIR's Satellite-Powered Tax Grab: Understanding RMC No. 5-2024</h3>
             <p>
-              A practical look at RMC No. 5-2024, the BIR's expanded view on cross-border services,
-              and why Philippine companies should review their foreign service arrangements.
+              A practical look at RMC No. 5-2024, the BIR's expanded view on cross-border services, and why Philippine companies should review their foreign service arrangements.
             </p>
-            <a href="rmc-5-2024-blog-themed.html" class="blog-link">Read more</a>
+            <a href="bir-rmc-5-2024.html" class="blog-link">Read more</a>
           </article>
 
           <article class="blog-card">
-            <p class="blog-date">May 6, 2026</p>
+            <p class="blog-date">May 7, 2026</p>
             <h3>The Piece of Paper That Could Cost You Everything: BIR VAT Invoicing Requirements</h3>
             <p>
-              A practical guide to VAT invoicing rules, the EOPT Act, RR No. 7-2024, RMC No. 77-2024,
-              and why invoice details matter for input tax claims.
+              A practical guide to VAT invoicing rules, the EOPT Act, RR No. 7-2024, RMC No. 77-2024, and why invoice details matter for input tax claims.
             </p>
-            <a href="bir-vat-invoicing-blog-themed.html" class="blog-link">Read more</a>
+            <a href="bir-vat-invoicing-blog.html" class="blog-link">Read more</a>
           </article>
 
           <article class="blog-card">
-            <p class="blog-date">May 5, 2026</p>
+            <p class="blog-date">May 7, 2026</p>
             <h3>The BIR Is Not Playing Nice Anymore: A Taxpayer's Field Guide to the New Enforcement Era</h3>
             <p>
-              A practical guide to the BIR's current enforcement push, including RATE, RAFT, Oplan Kandado,
-              ghost receipts, online sellers, and VAT audit risks.
+              A practical guide to the BIR's current enforcement push, including RATE, RAFT, Oplan Kandado, ghost receipts, online sellers, and VAT audit risks.
             </p>
-            <a href="bir-tax-enforcement-crackdown-blog-themed.html" class="blog-link">Read more</a>
+            <a href="bir-tax-enforcement-crackdown-blog.html" class="blog-link">Read more</a>
           </article>
         </div>
       </div>
@@ -498,32 +507,27 @@
           </p>
 
           <div class="contact-details">
-            <p><strong>Email</strong><br /><a href="mailto:info@yourdomain.com">ernestco@cocolawph.com</a></p>
-            <p><strong>Phone</strong><br /><a href="tel:+630000000000">+63 915 525 5370</a></p>
-            <p><strong>Office</strong><br />Room 405, JRDC Building, Osmeña Blvd, Cebu City, 6000 Cebu</p>
+            <p><strong>Email</strong><br /><a href="mailto:info@yourdomain.com">info@yourdomain.com</a></p>
+            <p><strong>Phone</strong><br /><a href="tel:+630000000000">+63 000 000 0000</a></p>
+            <p><strong>Office</strong><br />[Your Office Address]</p>
           </div>
         </div>
 
-        <form class="contact-form" action="mailto:https://formspree.io/f/xwvynjba" method="post" >
+        <form class="contact-form" action="https://formspree.io/f/xwvynjba" method="POST">
           <label>
             Name
-            <input type="text" name="Name" required />
+            <input type="text" name="name" required />
           </label>
-
           <label>
             Email
             <input type="email" name="email" required />
           </label>
-
           <label>
             Legal concern
-            <textarea name="Message" rows="6" required></textarea>
+            <textarea name="message" rows="6" required></textarea>
           </label>
-
           <button type="submit" class="button button-primary">Send Inquiry</button>
-          <p class="form-note">
-            For launch, replace this mailto form with Formspree, Netlify Forms, or your preferred secure intake form.
-          </p>
+          <p class="form-note">By submitting this form, you agree to be contacted about your inquiry. Please do not include confidential information until an attorney-client relationship is established.</p>
         </form>
       </div>
     </section>
@@ -544,20 +548,20 @@
   </footer>
 
   <script>
-    const toggle = document.querySelector(".menu-toggle");
-    const nav = document.querySelector(".site-nav");
-    const yearEl = document.getElementById("year");
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.site-nav');
+    const yearEl = document.getElementById('year');
 
     if (toggle && nav) {
-      toggle.addEventListener("click", () => {
-        const isOpen = nav.classList.toggle("open");
-        toggle.setAttribute("aria-expanded", String(isOpen));
+      toggle.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
       });
 
-      nav.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", () => {
-          nav.classList.remove("open");
-          toggle.setAttribute("aria-expanded", "false");
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
         });
       });
     }
