@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>BIR VAT Invoicing Requirements | Co &amp; Co Law Firm</title>
+  <meta name="description" content="A practical guide to BIR VAT invoicing requirements, the EOPT Act, RR No. 7-2024, RMC No. 77-2024, and input VAT claims." />
+
+  <style>
+
+    :root {
+      --navy: #0a2856;
+      --navy-deep: #071b33;
+      --gold: #c59a3a;
+      --gold-soft: #dcc085;
+      --paper: #f6f5f2;
+      --white: #ffffff;
+      --ink: #172033;
+      --muted: #5f6775;
+      --line: #e4e6ea;
+      --shadow: 0 14px 40px rgba(7, 27, 51, 0.08);
+
+      --color-border-primary: #e4e6ea;
+      --color-border-secondary: #e4e6ea;
+      --color-border-tertiary: #e4e6ea;
+      --color-border-warning: #c59a3a;
+      --color-border-danger: #c59a3a;
+      --color-border-info: #c59a3a;
+
+      --color-text-primary: #172033;
+      --color-text-secondary: #5f6775;
+      --color-text-tertiary: #7b8493;
+      --color-text-danger: #0a2856;
+      --color-text-info: #0a2856;
+
+      --color-background-secondary: #f6f5f2;
+      --color-background-danger: #f6f5f2;
+      --color-background-info: #f6f5f2;
+
+      --border-radius-md: 2px;
+      --border-radius-lg: 2px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.7;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    p {
+      margin: 0 0 20px;
+    }
+
+    h1,
+    h2,
+    h3,
+    .blog-title,
+    .section-title {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      line-height: 1.12;
+    }
+
+    .site-header {
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      min-height: 98px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .brand-logo {
+      width: 250px;
+      height: auto;
+    }
+
+    .back-link {
+      color: var(--navy-deep);
+      font-weight: 700;
+      border-bottom: 1px solid var(--gold);
+    }
+
+    .article-hero {
+      background:
+        linear-gradient(135deg, rgba(7, 27, 51, 0.96), rgba(10, 40, 86, 0.88)),
+        radial-gradient(circle at 80% 25%, rgba(197, 154, 58, 0.18), transparent 30%);
+      color: var(--white);
+      padding: 70px 0;
+    }
+
+    .article-hero-inner {
+      width: min(900px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .article-hero .eyebrow {
+      color: var(--gold-soft);
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .article-hero h1 {
+      max-width: 900px;
+      margin: 0;
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+    }
+
+    .article-shell {
+      width: min(900px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 64px 0 84px;
+      background: var(--white);
+    }
+
+    main {
+      background: var(--white);
+    }
+
+    .blog-wrap {
+      max-width: 760px;
+      padding: 0;
+      margin: 0 auto;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .blog-header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 24px;
+      margin-bottom: 34px;
+    }
+
+    .blog-tag {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 5px 10px;
+      border: 1px solid var(--gold);
+      background: var(--paper);
+      color: var(--navy-deep);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 700;
+      border-radius: 2px;
+    }
+
+    .blog-title {
+      margin: 0 0 14px;
+      color: var(--ink);
+      font-size: clamp(2rem, 4vw, 3.1rem);
+    }
+
+    .blog-subtitle {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      font-style: normal;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .byline {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .byline span {
+      color: var(--navy-deep);
+      font-weight: 700;
+    }
+
+    .blog-body {
+      color: var(--ink);
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    .blog-body p {
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      margin: 46px 0 16px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      color: var(--navy-deep);
+      font-size: clamp(1.55rem, 3vw, 2.1rem);
+    }
+
+    .callout,
+    .verdict,
+    .case-card,
+    .program-card,
+    .stat-card,
+    .req-item,
+    .service-pill {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      box-shadow: none;
+    }
+
+    .callout {
+      border-left: 4px solid var(--gold);
+      padding: 18px 22px;
+      margin: 26px 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .callout strong {
+      color: var(--navy-deep);
+    }
+
+    .services-grid,
+    .requirements-grid,
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 10px;
+      margin: 20px 0 28px;
+    }
+
+    .service-pill,
+    .req-item,
+    .stat-card {
+      padding: 14px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .req-label,
+    .verdict-label,
+    .program-tag {
+      color: var(--gold);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .case-card,
+    .program-card,
+    .verdict {
+      padding: 22px;
+      margin: 22px 0;
+    }
+
+    .case-title,
+    .program-name {
+      color: var(--navy-deep);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .case-gr,
+    .case-body,
+    .program-body,
+    .verdict-text,
+    .stat-label {
+      color: var(--muted);
+    }
+
+    .stat-num {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--navy-deep);
+      font-size: 2rem;
+    }
+
+    .inline-quote {
+      border-left: 4px solid var(--gold);
+      margin: 26px 0;
+      padding: 16px 20px;
+      color: var(--muted);
+      background: var(--paper);
+      font-style: italic;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .stamp {
+      display: inline-block;
+      border: 1px solid var(--gold);
+      color: var(--navy-deep);
+      background: var(--paper);
+      border-radius: 2px;
+      padding: 2px 7px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transform: none;
+    }
+
+    .footnote {
+      margin-top: 44px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-style: italic;
+      line-height: 1.65;
+    }
+
+    .site-footer {
+      padding: 32px 0;
+      background: var(--white);
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-inner {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .footer-logo {
+      width: 180px;
+      height: auto;
+    }
+
+    .footer-note {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: 6px 0 0;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner,
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 22px 0;
+      }
+
+      .brand-logo {
+        width: 190px;
+      }
+
+      .article-hero {
+        padding: 56px 0;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" aria-label="Co & Co Law Firm home">
+        <img src="assets/logo.png" alt="Co & Co Law Firm logo" class="brand-logo" />
+      </a>
+
+      <a href="index.html#blog" class="back-link">Back to Blog</a>
+    </div>
+  </header>
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <p class="eyebrow">Co & Co Law Firm Blog</p>
+      <h1>The Piece of Paper That Could Cost You Everything: BIR VAT Invoicing Requirements</h1>
+    </div>
+  </section>
+
+  <main>
+    <div class="article-shell">
+      <div class="blog-wrap">
+  <div class="blog-header">
+    <div class="blog-tag">VAT Compliance</div>
+    <h1 class="blog-title">The Piece of Paper That Could Cost You Everything: BIR VAT Invoicing Requirements</h1>
+    <p class="blog-subtitle">A guide to not accidentally torching your input tax claims over a missing stamp, with receipts from the Supreme Court</p>
+    <div class="byline">Philippine Tax Law Series  |  <span>VAT Invoicing & the EOPT Act</span>  |  RR No. 7-2024 &amp; RMC No. 77-2024</div>
+  </div>
+
+  <div class="blog-body">
+    <p>There is a special kind of tax grief reserved for the company that dutifully paid VAT, properly recorded every transaction, filed on time, and then lost its entire input tax claim because someone forgot to stamp the word <span class="stamp">zero-rated</span> on an invoice. It sounds almost comedic. The Supreme Court did not find it funny. Neither will your CFO.</p>
+
+    <p>Philippine VAT invoicing requirements have always been demanding. But with the passage of Republic Act No. 11976, or the Ease of Paying Taxes (EOPT) Act in early 2024, the BIR effectively pressed the reset button on a system taxpayers had been living with for decades, and invited everyone to learn new rules under penalty of up to ₱50,000 and a possible prison sentence. Ayan na ang "ease."</p>
+
+    <div class="section-title">The great official receipt retirement</div>
+    <p>The biggest bombshell from the EOPT Act is deceptively simple: the <em>invoice</em> now reigns supreme. For both goods <em>and</em> services. Gone, or at least demoted to "supplementary" status, is the Official Receipt (OR), the beloved document that every Filipino service company has been issuing since time immemorial.</p>
+
+    <p>Under RR No. 7-2024, which took effect on April 27, 2024, the invoice is now the principal evidence of every sale, whether you're selling a refrigerator, designing a website, or providing legal counsel. If you still handed your client an Official Receipt as the primary document after that date, the BIR considers it tantamount to issuing no invoice at all. Which means: failure to issue invoice. Which means: penalties.</p>
+
+    <div class="callout"><strong>What to do with those leftover OR booklets?</strong> You have two options. First, stamp them with the phrase "THIS DOCUMENT IS NOT VALID FOR CLAIM OF INPUT TAX" and use them as supplementary documents. Second, strike through "Official Receipt" and stamp "Invoice" instead, no BIR approval needed, just an inventory report submitted to your RDO. A word of caution: after December 31, 2024, converted ORs issued <em>after</em> that date can no longer support input VAT claims. Your transition window has closed.</div>
+
+    <div class="section-title">What must a proper VAT invoice actually contain?</div>
+    <p>Section 3(B) of RR No. 7-2024 is generous with its requirements. A compliant VAT invoice must have:</p>
+
+    <div class="requirements-grid">
+      <div class="req-item"><div class="req-label">Seller info</div>Registered name, TIN, business address</div>
+      <div class="req-item"><div class="req-label">Buyer info</div>Name and TIN (required if sale exceeds ₱1,000)</div>
+      <div class="req-item"><div class="req-label">Description</div>Goods sold or nature of service</div>
+      <div class="req-item"><div class="req-label">Amounts</div>Quantity, unit cost, VATable sales, VAT amount</div>
+      <div class="req-item"><div class="req-label">Date</div>Transaction date</div>
+      <div class="req-item"><div class="req-label">ATP</div>BIR Authority to Print number</div>
+      <div class="req-item"><div class="req-label">VAT status</div>"VAT-exempt sale" or "zero-rated sale" where applicable</div>
+      <div class="req-item"><div class="req-label">Word "Invoice"</div>Must appear in the document name</div>
+    </div>
+
+    <p>One piece of good news: the requirement to indicate your "business style" has been dropped. The BIR finally acknowledged that asking companies to put their trade name on every document alongside their registered name was more confusing than useful. Small mercy.</p>
+
+    <p>For mixed transactions, those involving VATable, exempt, and zero-rated components, the invoice must show a clear breakdown of each category with its corresponding VAT computation. Alternatively, you may issue separate invoices for each. This is the kind of detail that accountants lose sleep over and auditors live for.</p>
+
+    <div class="section-title">The "zero-rated" stamp: a lesson written in blood (and denied refunds)</div>
+    <p>If there is one invoicing lesson that the Supreme Court has hammered home with remarkable consistency, it is this: if your sale is zero-rated, you must print the word "zero-rated" on the face of your invoice. Not in the notes. Not in a separate document. On. The. Face. Of. The. Invoice.</p>
+
+    <p>The Court has denied refund claims on exactly this ground multiple times, in cases spanning different industries and different decades. Here are three you should know:</p>
+
+    <div class="case-card">
+      <div class="case-title">Kepco Philippines Corporation v. Commissioner of Internal Revenue</div>
+      <div class="case-gr">G.R. No. 181858  |  November 24, 2010</div>
+      <div class="case-body">Kepco, an independent power producer, claimed a refund of unutilized input VAT from its zero-rated sales of electricity to the National Power Corporation. The Supreme Court denied a portion of the claim because Kepco's invoices and receipts were not printed with "TIN-VAT" as required under Revenue Regulations 7-95. The Court was unequivocal: invoicing and substantiation requirements must be followed because they are the only way to verify the veracity of a taxpayer's claims. The penalty for non-compliance was being denied its own money back.</div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-title">Panasonic Communications Imaging Corporation v. Commissioner of Internal Revenue</div>
+      <div class="case-gr">G.R. No. 178090  |  February 8, 2010</div>
+      <div class="case-body">Panasonic, a manufacturer whose export sales were zero-rated, sought a tax credit refund. Denied, because its sales invoices did not state on their face that the sales were "zero-rated." The Court held that compliance with the requirement to print "zero-rated" on invoices covering zero-rated sales is essential and non-negotiable. Panasonic's argument that everyone knew these were zero-rated exports was charming but legally irrelevant.</div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-title">Silicon Philippines, Inc. (formerly Intel Philippines Manufacturing, Inc.) v. Commissioner of Internal Revenue</div>
+      <div class="case-gr">G.R. No. 172378  |  January 17, 2011</div>
+      <div class="case-body">Silicon Philippines (formerly Intel) had 100% export sales, all of which should have been zero-rated. The CTA and Supreme Court denied the input VAT refund partly because the export sales invoices were not duly registered with the BIR, did not indicate the Authority to Print number, and did not carry the word "zero-rated." Even a company selling entirely for export, with no domestic sales, must comply precisely with invoicing form. The fact that every peso went abroad saved Silicon no paperwork.</div>
+    </div>
+
+    <p>The pattern across these cases is unmistakable. As the Supreme Court put it in Nippon Express (Philippines) Corporation v. CIR (G.R. No. 191495, 2018): a VAT invoice and a VAT receipt are not interchangeable, and the invoicing requirements exist as the only reliable means to verify the truth of any taxpayer's claim. Courts are evidence-driven; your good intentions do not substitute for the right document.</p>
+
+    <div class="section-title">The invoice vs. official receipt distinction: a historical drama, now resolved</div>
+    <p>Before the EOPT Act tidied things up, Philippine jurisprudence was occupied for years with a question that sounds simple but generated enormous litigation: when you sell a <em>service</em>, should you issue a VAT invoice or a VAT official receipt?</p>
+
+    <p>The Tax Code's Section 108 on VAT for services referred to official receipts. Section 113 on invoicing requirements seemed to use invoice and receipt somewhat interchangeably. Companies argued, reasonably, that either document should work. The Supreme Court disagreed.</p>
+
+    <p>In a line of cases from Kepco through AT&T through Nippon Express, the Court established that for the sale of <em>services</em>, the VAT Official Receipt was the proper and indispensable document. Using a sales invoice instead was not good enough for an input tax claim, no matter how otherwise complete the document was. This distinction, now largely academic under the EOPT Act, which unified everything under the invoice, cost more than a few companies their refund claims.</p>
+
+    <div class="callout"><strong>The irony of the EOPT "fix":</strong> Congress resolved decades of invoice-vs-receipt confusion by making the invoice the primary document for everything. Problem solved, except that every taxpayer now needs to retrain staff, reconfigure systems, reprint documents, and submit inventory reports. The cure is administratively heavier than the disease. Still, it is the cure Congress prescribed, so here we are.</div>
+
+    <div class="section-title">Penalties: the part nobody wants to read, but everyone should</div>
+    <p>Failure to issue a proper invoice as the primary document is not a minor slip. Under Section 264(a) of the Tax Code, penalties range from ₱1,000 to ₱50,000 per violation, plus imprisonment of two to four years. The BIR's Oplan Kandado program has the authority to temporarily close your establishment for serious invoicing violations. A company that chronically fails to issue proper invoices, or issues fake ones, can be treated as having committed tax fraud.</p>
+
+    <p>For the buyer, the stakes are equally high. An incomplete invoice from your supplier can result in denial of your input VAT claim, even if you paid the VAT and even if the underlying transaction is entirely legitimate. Under RR No. 7-2024, the buyer is protected only if the invoice contains the five essential elements: sales amount, VAT amount, registered names and TINs of both parties, description of goods or services, and the transaction date. Missing any other field, say, the quantity or unit cost, is the seller's problem. Missing one of those five? It becomes your problem too.</p>
+
+    <div class="section-title">What this means for your business right now</div>
+    <p>If you haven't already, audit your invoicing system today. VAT-registered sellers must issue a VAT invoice for every sale transaction, regardless of amount, no de minimis exception for VAT registrants. Non-VAT sellers need only issue for transactions of ₱500 or more, or on the buyer's request. Your accounting software must use the word "Invoice" in the document name. Your zero-rated transactions must say "zero-rated" on the face of the invoice. Your VAT-exempt transactions must say "VAT-exempt sale."</p>
+
+    <p>The BIR has begun issuing Letters of Authority for VAT investigation covering the first half of 2024, precisely the transition period when many companies were still figuring out what an "invoice" meant under the new rules. That is not a comfortable overlap. The expectation of leniency during the transition is reasonable; the guarantee of it is not.</p>
+
+    <div class="verdict">
+      <div class="verdict-label">The bottom line</div>
+      <div class="verdict-text">Philippine VAT invoicing requirements have always been strict, and the Supreme Court has enforced them with a consistency that should give every finance team pause. The EOPT Act modernized the framework, the invoice is now king, but it did not soften the consequences of non-compliance. Miss a "zero-rated" stamp, use the wrong document type, or let a supplier hand you an incomplete invoice, and you may find yourself litigating for a refund that the Court will deny on procedural grounds alone. In tax law, form is not a formality. It is the substance of your claim.</div>
+    </div>
+  </div>
+
+  <div class="footnote">This blog post is for general information purposes only and does not constitute legal or tax advice. The jurisprudence cited reflects Philippine Supreme Court decisions as publicly reported. Consult a qualified tax professional for guidance on your specific circumstances. And please, just put "zero-rated" on the invoice.</div>
+</div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <img src="assets/logo.png" alt="Co & Co Law Firm logo" class="footer-logo" />
+      <div>
+        <p>© <span id="year"></span> Co & Co Law Firm. All rights reserved.</p>
+        <p class="footer-note">This website is for general information only and does not create an attorney-client relationship.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const yearEl = document.getElementById("year");
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+  </script>
+</body>
+</html>
