@@ -68,10 +68,7 @@
       gap: 24px;
     }
 
-    .brand-logo {
-      width: 250px;
-      height: auto;
-    }
+    .brand-logo { width: 250px; height: auto; }
 
     .site-nav {
       display: flex;
@@ -193,7 +190,7 @@
 
     .blog-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 24px;
       margin-top: 34px;
     }
@@ -279,10 +276,7 @@
       gap: 28px;
     }
 
-    .footer-logo {
-      width: 180px;
-      height: auto;
-    }
+    .footer-logo { width: 180px; height: auto; }
 
     .footer-note {
       margin-top: 6px;
@@ -398,6 +392,15 @@
         </p>
 
         <div class="blog-grid">
+          <article class="blog-card">
+            <p class="blog-date">June 2026</p>
+            <h3>The BIR's Olive Branch: A Field Guide to the Micro Taxpayer Abatement Program</h3>
+            <p>
+              A practical guide to RR No. 4-2026, the ₱5,000 micro taxpayer abatement program, and what small business owners should know before the deadline.
+            </p>
+            <a href="bir-amnesty-small-business-blog.html" class="blog-link">Read more</a>
+          </article>
+
           <article class="blog-card">
             <p class="blog-date">May 7, 2026</p>
             <h3>The BIR's Satellite-Powered Tax Grab: Understanding RMC No. 5-2024</h3>
